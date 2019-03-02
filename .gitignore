@@ -1,0 +1,4 @@
+
+*.lock
+.vs/Game/v15/.suo
+.vs/Game/DesignTimeBuild/.dtbcache
