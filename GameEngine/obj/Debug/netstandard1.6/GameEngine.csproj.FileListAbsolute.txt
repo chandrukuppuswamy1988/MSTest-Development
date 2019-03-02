@@ -1,0 +1,9 @@
+E:\Repository\MsTest-Development\MSTest-Development\GameEngine\bin\Debug\netstandard1.6\GameEngine.deps.json
+E:\Repository\MsTest-Development\MSTest-Development\GameEngine\bin\Debug\netstandard1.6\GameEngine.dll
+E:\Repository\MsTest-Development\MSTest-Development\GameEngine\bin\Debug\netstandard1.6\GameEngine.pdb
+E:\Repository\MsTest-Development\MSTest-Development\GameEngine\obj\Debug\netstandard1.6\GameEngine.csprojAssemblyReference.cache
+E:\Repository\MsTest-Development\MSTest-Development\GameEngine\obj\Debug\netstandard1.6\GameEngine.csproj.CoreCompileInputs.cache
+E:\Repository\MsTest-Development\MSTest-Development\GameEngine\obj\Debug\netstandard1.6\GameEngine.AssemblyInfoInputs.cache
+E:\Repository\MsTest-Development\MSTest-Development\GameEngine\obj\Debug\netstandard1.6\GameEngine.AssemblyInfo.cs
+E:\Repository\MsTest-Development\MSTest-Development\GameEngine\obj\Debug\netstandard1.6\GameEngine.dll
+E:\Repository\MsTest-Development\MSTest-Development\GameEngine\obj\Debug\netstandard1.6\GameEngine.pdb
