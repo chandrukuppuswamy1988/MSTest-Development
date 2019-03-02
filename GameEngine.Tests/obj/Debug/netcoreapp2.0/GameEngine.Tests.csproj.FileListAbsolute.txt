@@ -1,0 +1,14 @@
+E:\Repository\MsTest-Development\MSTest-Development\GameEngine.Tests\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\Repository\MsTest-Development\MSTest-Development\GameEngine.Tests\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\Repository\MsTest-Development\MSTest-Development\GameEngine.Tests\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\Repository\MsTest-Development\MSTest-Development\GameEngine.Tests\bin\Debug\netcoreapp2.0\GameEngine.Tests.deps.json
+E:\Repository\MsTest-Development\MSTest-Development\GameEngine.Tests\bin\Debug\netcoreapp2.0\GameEngine.Tests.runtimeconfig.json
+E:\Repository\MsTest-Development\MSTest-Development\GameEngine.Tests\bin\Debug\netcoreapp2.0\GameEngine.Tests.runtimeconfig.dev.json
+E:\Repository\MsTest-Development\MSTest-Development\GameEngine.Tests\bin\Debug\netcoreapp2.0\GameEngine.Tests.dll
+E:\Repository\MsTest-Development\MSTest-Development\GameEngine.Tests\bin\Debug\netcoreapp2.0\GameEngine.Tests.pdb
+E:\Repository\MsTest-Development\MSTest-Development\GameEngine.Tests\obj\Debug\netcoreapp2.0\GameEngine.Tests.csprojAssemblyReference.cache
+E:\Repository\MsTest-Development\MSTest-Development\GameEngine.Tests\obj\Debug\netcoreapp2.0\GameEngine.Tests.csproj.CoreCompileInputs.cache
+E:\Repository\MsTest-Development\MSTest-Development\GameEngine.Tests\obj\Debug\netcoreapp2.0\GameEngine.Tests.AssemblyInfoInputs.cache
+E:\Repository\MsTest-Development\MSTest-Development\GameEngine.Tests\obj\Debug\netcoreapp2.0\GameEngine.Tests.AssemblyInfo.cs
+E:\Repository\MsTest-Development\MSTest-Development\GameEngine.Tests\obj\Debug\netcoreapp2.0\GameEngine.Tests.dll
+E:\Repository\MsTest-Development\MSTest-Development\GameEngine.Tests\obj\Debug\netcoreapp2.0\GameEngine.Tests.pdb
