@@ -8,15 +8,20 @@ namespace GameEngine.Tests
     [TestClass]
     public class Lifecycle
     {
+        static string SomeTestContext; // for simplicity we use string this might be some complex object whc is ver expensive to create
 
         [ClassInitialize]
         public static void LifecycleClassInitialize(TestContext context)
         {
             Console.WriteLine("  ClassInitialize Lifecycle");
+
+            Console.WriteLine("  data loaded from disk or from expensive object");
+            SomeTestContext = "42";
+
         }
 
         [ClassCleanup]
-        public static void LifecycleClassCleanUp(TestContext context)
+        public static void LifecycleClassCleanUp()
         {
             Console.WriteLine("  ClassCleanup Lifecycle");
         }
@@ -38,6 +43,7 @@ namespace GameEngine.Tests
         public void TestA()
         {
             Console.WriteLine("     Test A Starting");
+            Console.WriteLine($"     Shared Test Context ${SomeTestContext}");
         }
 
         [TestMethod]
