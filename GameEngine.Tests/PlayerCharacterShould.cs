@@ -1,4 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace GameEngine.Tests
 {
@@ -82,5 +84,113 @@ namespace GameEngine.Tests
             StringAssert.StartsWith(sut.FullName,"Sarah");
         }
 
+        [TestMethod]
+        public void HaveFullNameEndingWithLastName()
+        {
+
+            var sut = new PlayerCharacter();
+
+            sut.FirstName = "Sarah";
+            sut.LastName = "Smith";
+
+            StringAssert.EndsWith(sut.FullName, "Smith");
+        }
+
+
+        [TestMethod]
+        public void CalculateFullName_SubstringAssertExample()
+        {
+
+            var sut = new PlayerCharacter();
+
+            sut.FirstName = "Sarah";
+            sut.LastName = "Smith";
+
+            StringAssert.Contains(sut.FullName, "ah Sm");
+        }
+
+
+        [TestMethod]
+        public void CalculateFullNameWithTitleCase()
+        {
+
+            var sut = new PlayerCharacter();
+
+            sut.FirstName = "Sarah";
+            sut.LastName = "Smith";
+
+            StringAssert.Matches(sut.FullName, new Regex("[A-Z]{1}[a-z]+ [A-Z]{1}[a-z]+"));
+            //Complimentary string doesNotMatch exists
+        }
+
+        [TestMethod]
+        public void HaveALongBow()
+        {
+            var sut = new PlayerCharacter();
+
+            CollectionAssert.Contains(sut.Weapons, "Long Bow");
+        }
+
+        [TestMethod]
+        public void NotHaveAStaffOfWonder()
+        {
+            var sut = new PlayerCharacter();
+
+            CollectionAssert.DoesNotContain(sut.Weapons, "Staff Of Wonder");
+        }
+
+        [TestMethod]
+        public void HaveAllExpectedWeapon()
+        {
+            var sut = new PlayerCharacter();
+
+            var expectedWeapons = new string[]
+            {
+                "Long Bow",
+                "Short Bow",
+                "Short Sword"
+            };
+
+            CollectionAssert.AreEqual(expectedWeapons,sut.Weapons); // order should be same
+
+        }
+        [TestMethod]
+        public void HaveAllExpectedWeapon_AnyOrder()
+        {
+            var sut = new PlayerCharacter();
+
+            var expectedWeapons = new string[]
+            {
+                "Short Bow",
+                "Long Bow",                
+                "Short Sword"
+            };
+
+            CollectionAssert.AreEquivalent(expectedWeapons, sut.Weapons); // order can be different
+        }
+        [TestMethod]
+        public void HaveNoDuplicateWeapons()
+        {
+            var sut = new PlayerCharacter();
+
+            
+            CollectionAssert.AllItemsAreUnique(sut.Weapons); // order can be different
+        }
+
+        [TestMethod]
+        public void HaveAtleastOneKindOfSword()
+        {
+            var sut = new PlayerCharacter();
+
+            Assert.IsTrue(sut.Weapons.Any(p => p.Contains("Sword")));
+        }
+
+        [TestMethod]
+        public void HaveNoEmptyDefaultWeapon()
+        {
+            var sut = new PlayerCharacter();
+
+            Assert.IsFalse(sut.Weapons.Any(p => string.IsNullOrWhiteSpace(p)));
+        }
     }
 }
