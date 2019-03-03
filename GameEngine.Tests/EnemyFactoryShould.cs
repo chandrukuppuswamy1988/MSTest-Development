@@ -4,13 +4,16 @@ using System;
 namespace GameEngine.Tests
 {
     [TestClass]
+    [TestCategory("Enemy Creation")]
     public class EnemyFactoryShould
     {
         [TestMethod]
         public void NotAllowNullName()
         {
+            Console.WriteLine("Creating Enemy Factory");
             EnemyFactory sut = new EnemyFactory();
 
+            Console.WriteLine("Calling create method");
             Assert.ThrowsException<ArgumentNullException>(
                 () => sut.Create(null)                
                 );
