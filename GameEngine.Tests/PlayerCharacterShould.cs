@@ -57,5 +57,30 @@ namespace GameEngine.Tests
 
             Assert.IsTrue(sut.Health >= 101 && sut.Health <= 200);
         }
+
+        [TestMethod]
+        public void CalculateFullName()
+        {
+            var sut = new PlayerCharacter();
+
+            sut.FirstName = "Sarah";
+            sut.LastName = "Smith";
+
+            // Assert.AreEqual("Sarah Smith", sut.FullName);// case sensitive on string
+            Assert.AreEqual("SARAH SMITH", sut.FullName,true);
+
+        }
+
+        [TestMethod]
+        public void HaveFullNameStartingWithFirstName()
+        {
+            var sut = new PlayerCharacter();
+
+            sut.FirstName = "Sarah";
+            sut.LastName = "Smith";
+
+            StringAssert.StartsWith(sut.FullName,"Sarah");
+        }
+
     }
 }
