@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -35,15 +36,50 @@ namespace GameEngine.Tests
             Assert.AreEqual(100, sut.Health);
         }
 
-        [TestMethod]
+        public static IEnumerable<object[]> Damages
+        {
+            get
+            {
+                return new List<object[]>
+                {
+                    new object[]{1,99},
+                    new object[]{0,100},
+                    new object[]{100,1},
+                    new object[]{101,1},
+                    new object[]{ 50,50}
+                };
+            }
+        }
+
+        public static IEnumerable<object[]> GetDamages()
+        {
+
+            return new List<object[]>
+                {
+                    new object[]{1,99},
+                    new object[]{0,100},
+                    new object[]{100,1},
+                    new object[]{101,1},
+                    new object[]{ 50,50}
+                };
+        }
+
+        [DataTestMethod]
+        //[DynamicData(nameof(Damages))]
+        //[DynamicData(nameof(GetDamages),DynamicDataSourceType.Method)
+        [DynamicData(nameof(DamageData.GetDamages),typeof(DamageData), DynamicDataSourceType.Method)]
+        //[DataRow(1,99)]
+        //[DataRow(0, 100)]
+        //[DataRow(100, 1)]
+        //[DataRow(101, 1)]
         [TestCategory("Player Health")]
-        public void TakeDamage()
+        public void TakeDamage(int damage,int expectedHealth)
         {
             var sut = new PlayerCharacter();
 
-            sut.TakeDamage(1);
+            sut.TakeDamage(damage);
 
-            Assert.AreEqual(99, sut.Health);
+            Assert.AreEqual(expectedHealth, sut.Health);
         }
 
         [TestMethod]
