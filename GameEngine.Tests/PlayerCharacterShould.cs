@@ -8,12 +8,21 @@ namespace GameEngine.Tests
     [TestClass]
     public class PlayerCharacterShould
     {
+
+        PlayerCharacter sut;
+
+        [TestInitialize]
+        public void TestInitialize()
+        {
+            sut = new PlayerCharacter();
+        }
+
         [TestMethod]
         [TestCategory("Player Defaults")]
         //[Ignore]
         public void BeInexperiencedWhenNew()
         {
-            var sut = new PlayerCharacter();
+            
 
             Assert.IsTrue(sut.IsNoob);
         }
@@ -23,15 +32,13 @@ namespace GameEngine.Tests
         //[Ignore("Ignore for Refactoring")] un comment to ignore with message
         public void NotHaveNickNameByDefault()
         {
-            var sut = new PlayerCharacter();
-
+           
             Assert.IsNull(sut.Nickname);
         }
         [TestMethod]
         [TestCategory("Player Defaults")]
         public void StartWithDefaultHealth()
-        {
-            var sut = new PlayerCharacter();
+        {           
 
             Assert.AreEqual(100, sut.Health);
         }
@@ -76,7 +83,7 @@ namespace GameEngine.Tests
         [TestCategory("Player Health")]
         public void TakeDamage(int damage,int expectedHealth)
         {
-            var sut = new PlayerCharacter();
+            
 
             sut.TakeDamage(damage);
 
@@ -86,8 +93,7 @@ namespace GameEngine.Tests
         [TestMethod]
         [TestCategory("Player Health")]
         public void TakeDamage_NotEqual()
-        {
-            var sut = new PlayerCharacter();
+        {          
 
             sut.TakeDamage(1);
 
@@ -98,7 +104,6 @@ namespace GameEngine.Tests
         [TestCategory("Player Health")]
         public void IncreaseHealthAfterSleeping()
         {
-            var sut = new PlayerCharacter();
 
             sut.Sleep();
 
@@ -107,9 +112,7 @@ namespace GameEngine.Tests
 
         [TestMethod]
         public void CalculateFullName()
-        {
-            var sut = new PlayerCharacter();
-
+        {          
             sut.FirstName = "Sarah";
             sut.LastName = "Smith";
 
@@ -120,8 +123,7 @@ namespace GameEngine.Tests
 
         [TestMethod]
         public void HaveFullNameStartingWithFirstName()
-        {
-            var sut = new PlayerCharacter();
+        {          
 
             sut.FirstName = "Sarah";
             sut.LastName = "Smith";
@@ -133,7 +135,7 @@ namespace GameEngine.Tests
         public void HaveFullNameEndingWithLastName()
         {
 
-            var sut = new PlayerCharacter();
+           
 
             sut.FirstName = "Sarah";
             sut.LastName = "Smith";
@@ -146,7 +148,7 @@ namespace GameEngine.Tests
         public void CalculateFullName_SubstringAssertExample()
         {
 
-            var sut = new PlayerCharacter();
+          
 
             sut.FirstName = "Sarah";
             sut.LastName = "Smith";
@@ -159,8 +161,6 @@ namespace GameEngine.Tests
         public void CalculateFullNameWithTitleCase()
         {
 
-            var sut = new PlayerCharacter();
-
             sut.FirstName = "Sarah";
             sut.LastName = "Smith";
 
@@ -171,7 +171,7 @@ namespace GameEngine.Tests
         [TestMethod]
         public void HaveALongBow()
         {
-            var sut = new PlayerCharacter();
+           
 
             CollectionAssert.Contains(sut.Weapons, "Long Bow");
         }
@@ -179,15 +179,14 @@ namespace GameEngine.Tests
         [TestMethod]
         public void NotHaveAStaffOfWonder()
         {
-            var sut = new PlayerCharacter();
-
+         
             CollectionAssert.DoesNotContain(sut.Weapons, "Staff Of Wonder");
         }
 
         [TestMethod]
         public void HaveAllExpectedWeapon()
         {
-            var sut = new PlayerCharacter();
+           
 
             var expectedWeapons = new string[]
             {
@@ -202,7 +201,7 @@ namespace GameEngine.Tests
         [TestMethod]
         public void HaveAllExpectedWeapon_AnyOrder()
         {
-            var sut = new PlayerCharacter();
+           
 
             var expectedWeapons = new string[]
             {
@@ -216,8 +215,7 @@ namespace GameEngine.Tests
         [TestMethod]
         public void HaveNoDuplicateWeapons()
         {
-            var sut = new PlayerCharacter();
-
+           
             
             CollectionAssert.AllItemsAreUnique(sut.Weapons); // order can be different
         }
@@ -225,7 +223,7 @@ namespace GameEngine.Tests
         [TestMethod]
         public void HaveAtleastOneKindOfSword()
         {
-            var sut = new PlayerCharacter();
+            
 
             Assert.IsTrue(sut.Weapons.Any(p => p.Contains("Sword")));
         }
@@ -233,8 +231,6 @@ namespace GameEngine.Tests
         [TestMethod]
         public void HaveNoEmptyDefaultWeapon()
         {
-            var sut = new PlayerCharacter();
-
             Assert.IsFalse(sut.Weapons.Any(p => string.IsNullOrWhiteSpace(p)));
         }
     }
