@@ -15,3 +15,4 @@ E:\Repository\MsTest-Development\MSTest-Development\GameEngine.Tests\obj\Debug\n
 E:\Repository\MsTest-Development\MSTest-Development\GameEngine.Tests\bin\Debug\netcoreapp2.0\GameEngine.dll
 E:\Repository\MsTest-Development\MSTest-Development\GameEngine.Tests\bin\Debug\netcoreapp2.0\GameEngine.pdb
 E:\Repository\MsTest-Development\MSTest-Development\GameEngine.Tests\obj\Debug\netcoreapp2.0\GameEngine.Tests.csproj.CopyComplete
+E:\Repository\MsTest-Development\MSTest-Development\GameEngine.Tests\bin\Debug\netcoreapp2.0\Damage.csv

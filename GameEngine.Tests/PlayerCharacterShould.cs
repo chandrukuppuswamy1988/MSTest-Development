@@ -68,6 +68,7 @@ namespace GameEngine.Tests
         //[DynamicData(nameof(Damages))]
         //[DynamicData(nameof(GetDamages),DynamicDataSourceType.Method)
         [DynamicData(nameof(DamageData.GetDamages),typeof(DamageData), DynamicDataSourceType.Method)]
+        [DynamicData(nameof(ExternalHealthDamageTestData.TestData), typeof(ExternalHealthDamageTestData), DynamicDataSourceType.Property)]
         //[DataRow(1,99)]
         //[DataRow(0, 100)]
         //[DataRow(100, 1)]
