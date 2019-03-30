@@ -18,7 +18,7 @@ This project is the sole of the repository.which demonstrates the power of micro
  This covered the entire assert equals to object type comparisons and list comparisons were also covered.please check PlayerCharectorShould class
 for more details.
 
-### LifeCycle Hooks
+### Lifecycle Hooks
 
 Please check for the lifecycle and assembly classes for the test class level,test level  and assembly level hooks
 
@@ -26,4 +26,10 @@ Please check for the lifecycle and assembly classes for the test class level,tes
 
 we also implemented how the test categories and how to ignore test cases with or without message.
 
+### Reusing tests with test datas
 
+we implemented hardcoded values as attributes to the test data.see for commented lines of the PlayerChareterShould TakeDamage method for more understanding
+we also implemented the dynamica data from external source like csv files.
+
+
+#### Note: commented codes are there in this project for reference purposes to demonstrate the values
