@@ -1,6 +1,6 @@
 # MSTest-Development
 
-The Project to Practice MS Test in C#.This Project is the simple with only microsoft libraries are used without any 
+The Microsoft Test Project Portfolio in C#.This Project is the simple with only microsoft libraries are used without any 
 external libraries.
 
 #### Note: commented codes are there in this project for reference purposes to demonstrate the different types of implementation
