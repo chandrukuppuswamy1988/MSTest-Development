@@ -3,6 +3,8 @@
 The Project to Practice MS Test in C#.This Project is the simple with only microsoft libraries are used without any 
 external libraries.
 
+#### Note: commented codes are there in this project for reference purposes to demonstrate the different types of implementation
+
 ## Project Explanation
 
 ### GameEngine
@@ -32,4 +34,4 @@ we implemented hardcoded values as attributes to the test data.see for commented
 we also implemented the dynamica data from external source like csv files.
 
 
-#### Note: commented codes are there in this project for reference purposes to demonstrate the values
+
