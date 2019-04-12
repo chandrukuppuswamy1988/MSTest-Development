@@ -28,7 +28,7 @@ Please check for the lifecycle and assembly classes for the test class level,tes
 
 we also implemented how the test categories and how to ignore test cases with or without message.
 
-### Reusing tests with test datas
+### Reusing tests with test data
 
 we implemented hardcoded values as attributes to the test data.see for commented lines of the PlayerChareterShould TakeDamage method for more understanding
 we also implemented the dynamica data from external source like csv files.
